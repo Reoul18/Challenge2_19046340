@@ -1,0 +1,140 @@
+@font-face{
+    font-family:'Nasalization';
+    src:url('Fonts/nasalization-rg-webfont.woff');
+}
+
+body {
+	color: #005288;    
+	font-family: Nasalization;
+	background-color: black;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+img{
+    width: 400px;
+    margin-left: 20px;
+}
+
+h1{ 
+    font-size: 100px;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 20px;
+	text-shadow: 1px 1px 0 rgb(255, 254, 254);
+}
+
+/*DE BAL*/
+#bal {
+    margin: 50px;
+	margin-left: 0px;
+    transition-duration: 1s;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgb(255, 230, 7);
+}
+
+#bal.changesSize {
+	transition-duration: 10s;
+	margin-left: 70%;
+	background-color: rgb(84, 83, 90);
+	/*transition: background-color 5s ease-out, margin-left 5s ease-in;*/
+    animation: 3s linear 1s infinite running slidein;
+}
+
+/*KLOK*/
+.klokcontainer {
+	width: 500px;
+	margin:auto;
+    padding: 20px;
+	border: 5px solid #005288;
+    border-radius: 50%;
+	background-color: #000000;
+	overflow: hidden;
+	text-align: center;	
+	border-radius: 50px;
+}
+p{
+    margin: 0px;
+    padding: 5px;
+    font-size: 50px;
+}
+#klok{
+    font-size: 50px;
+    color: white;
+}
+.puntjes {
+	opacity: 0;
+}
+
+/*Dagen in Mars*/
+.dagcontainer{
+	width: 500px;
+	margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+	border: 5px solid #005288;
+    border-radius: 50%;
+	background-color: #000000;
+	overflow: hidden;
+	text-align: center;	
+	border-radius: 30px;
+    position: relative;
+}
+
+.tekst{
+    /*display: block;--niet nodig?*/
+    font-size: 30px;
+}
+
+#dagen{
+    font-size: 35px;
+    color: #ffffff;
+}
+
+/*Datum*/
+.datumcontainer{
+	width: 500px;
+	margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+	border: 5px solid #005288;
+    border-radius: 50%;
+	background-color: #000000;
+	overflow: hidden;
+	text-align: center;	
+	border-radius: 30px;
+    position: relative;
+}
+
+#datum{
+    font-size: 35px;
+    color: white;
+}
+
+.verschilcontainer{
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 5px solid #005288;
+    border-radius: 50%;
+    background-color: #000000;
+    overflow: hidden;
+    text-align: center;	
+    border-radius: 30px;
+    position: relative;
+}
+
+#dagenVerschil{
+    font-size: 35px;
+    color: white;
+}
+
+footer{
+    font-size: 50px;
+    text-align: center;
+}
