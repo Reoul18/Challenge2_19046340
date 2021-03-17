@@ -63,7 +63,7 @@ initClock();
 
 //VANDAAG
 var today = new Date();
-var dag = ['Maandag', 'Dinsdag', 'Woensdag', 'Dondergdag', 'Vrijdag', 'Zaterdag', 'Zondag'];
+var dag = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'];
 
 document.getElementById('vandaag').innerHTML = dag[today.getDay()-1];
 
@@ -93,7 +93,7 @@ document.getElementById('datum').innerHTML = vandaag.getDate() + ' ' + maanden[v
 
 
 //Verschil tussen Aarde en Mars
-var aardeTijd = new Date(2023, 06, 01); //reizen duurt 7 maanden, aarde tijd
+var aardeTijd = new Date(2023, 06, 01); //reizen duurt 7 maanden, aarde tijd. vertrok in januari
 var marsTijd = new Date(); 
 
 var difference = aardeTijd.getTime() - marsTijd.getTime();
