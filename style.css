@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
 }
 
-img{
+.logo{
     width: 200px;
     margin-left: 20px;
     margin-top: 0px;
@@ -79,7 +79,6 @@ button{
 #zon, #maan{
     width: 100px;
 }
-
 
 
 
@@ -208,11 +207,11 @@ button{
         gap: 5px;
     }
     
-    img{
-        width:250px;
+    .logo{
+        width: 300px;
     }
     h1{
-        font-size: 3.5em;
+        font-size: 4em;
     }
     
     #zon, #maan{
@@ -230,12 +229,12 @@ button{
         "verschil temperatuur temperatuur"
         "foot foot foot";
         gap: 5px;
-    }
-    img{
-        width: 300px;
+    } 
+    .logo{
+        width: 380px;
     }
     h1{
-        font-size: 4em;
+        font-size: 4.5em;
     }
     #zon, #maan{
         width: 180px;
@@ -264,8 +263,11 @@ button{
     img{
         width: 300px;
     }
+    .logo{
+        width: 400px;
+    }
     h1{
-        font-size: 4em;
+        font-size: 5em;
     }
     .animatie{
         display: block;
@@ -277,7 +279,9 @@ button{
         font-size: 2.5em;
         color: #ffffff;
     }
-    
+    .verschil, .temperatuur1{
+        padding-top: 60px;
+    }
     .tekst{
         font-size: 2em;
         margin: 0px;
