@@ -117,29 +117,15 @@ if(uur >= 0 && uur < 6){
 
 
 //Animatie Elon Musk
-
 var mainHeading = document.getElementById('elon');
 
 document.getElementById('playButton').onclick = function(){
 	mainHeading.classList.add('changesSize');
 };
 
-/*
-Manier 1
-document.getElementById('backButton').onclick = function(){
-	mainHeading.classList.add('changesSizeReverse');
-};*/
-
-/*Manier2*/
 document.getElementById('backButton').onclick = function(){
 	mainHeading.classList.remove('changesSize');
 };
-
-//var elon = document.getElementById('elon');
-
-//document.getElementById('playButton').onclick = function(){
-//	elon.style.animationPlayState = 'running';
-//};
 
 
 

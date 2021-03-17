@@ -57,14 +57,14 @@ footer{
 
 button{
     height: 50px;
-    width: 100px;
+    width: 150px;
     background-color: black;
     color: white;
     border-radius: 20%;
+    font-size: 20px;
 }
 
 /*DE BAL*/
-
 .ballen {
     margin: auto;
 	overflow: hidden;
@@ -141,8 +141,6 @@ button{
 }
 
 /*Elon Musk Animatie*/
-
-
 #elon {
     overflow: hidden;
     transition-duration: 3s;
@@ -158,28 +156,6 @@ button{
     opacity: 1;
 }
 
-/*
-#space {
-	position: relative;
-	width: 600px;
-	height: 200px;
-	overflow: hidden;
-}
-
-#elon {
-	position: absolute;
-	left: 150px;
-	animation: 2000ms smooth alternate ease-in;
-}
-
-@keyframes smooth {
-    0% { 
-        left: 550px; 
-    }
-    100% { 
-        left: 150px;
-    }
-}*/
 
 .animatie{
     display: none;
@@ -298,12 +274,12 @@ button{
         width: 200px;
     }
     #vandaag, #dagen, #datum, #dagenVerschil, #temperatuur {
-        font-size: 2em;
+        font-size: 2.5em;
         color: #ffffff;
     }
     
     .tekst{
-        font-size: 1.7em;
+        font-size: 2em;
         margin: 0px;
     }
 }
