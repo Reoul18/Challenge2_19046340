@@ -11,56 +11,90 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 img{
-    width: 400px;
+    width: 200px;
     margin-left: 20px;
+    margin-top: 0px;
 }
 
 h1{ 
-    font-size: 10em;
+    font-size: 3em;
     text-align: center;
-    margin: 0px;
+    margin: auto;
     margin-bottom: 20px;
 	text-shadow: 1px 1px 0 rgb(255, 254, 254);
 }
 
-/*DE BAL*/
-#bal {
-    margin: 50px;
-	margin-left: 0px;
-    transition-duration: 1s;
-    display: inline-block;
-    width: 250px;
-    height: 250px;
+.container{
+	margin: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+	border: 5px solid #005288;
     border-radius: 50%;
-    background-color: rgb(255, 230, 7);
+	background-color: rgba(0,0,0,0.9);
+	overflow: hidden;
+	text-align: center;	
+	border-radius: 30px;
+    position: relative;
 }
 
-#bal.changesSize {
-	transition-duration: 10s;
-	margin-left: 70%;
-	background-color: rgb(84, 83, 90);
-	/*transition: background-color 5s ease-out, margin-left 5s ease-in;*/
-    animation: 3s linear 1s infinite running slidein;
+#vandaag, #dagen, #datum, #dagenVerschil, #temperatuur {
+    font-size: 1.8em;
+    color: #ffffff;
 }
 
-p{
+.tekst{
+    font-size: 1.5em;
     margin: 0px;
-    padding: 5px;
-    font-size: 2em;
 }
+
+footer{
+    font-size: 2em;
+    text-align: center;
+	text-shadow: 1px 1px 0 rgb(255, 254, 254);
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 20%;
+}
+
+/*DE BAL*/
+
+.ballen {
+    margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+#zon.block, #maan.block{
+    display: block;
+}
+#zon.none, #maan.none{
+    display: none;
+}
+#zon, #maan{
+    width: 100px;
+}
+
+
 
 
 /*KLOK*/
 .wrapper {
     margin: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
     height: 110px;
-    width: 400px;
+    width: 350px;
     position: relative;
     background: linear-gradient(200deg,  #fafafa, #ffe882, #074963);
     border-radius: 10px;
     cursor: default;
-    animation: animate 20s linear infinite;
+    animation: animate 10s linear infinite;
 }
 .wrapper .display,
 .wrapper span {
@@ -106,30 +140,170 @@ p{
     filter: blur(20px);
 }
 
+/*Elon Musk Animatie*/
 
 
-.container{
-	width: 500px;
-	margin: auto;
-    margin-top: 30px;
-    padding: 20px;
-	border: 5px solid #005288;
-    border-radius: 50%;
-	background-color: #000000;
+#elon {
+    overflow: hidden;
+    transition-duration: 3s;
+    margin-left: 300px;
+    opacity: 0;
+}
+
+#elon.changesSize {
+	transition-duration: 3s;
+	margin-left: 30px;
+	transition-timing-function: ease-in;
+	transition: 1s ease-in;
+    opacity: 1;
+}
+
+/*
+#space {
+	position: relative;
+	width: 600px;
+	height: 200px;
 	overflow: hidden;
-	text-align: center;	
-	border-radius: 30px;
-    position: relative;
 }
 
-#vandaag, #dagen, #datum, #dagenVerschil, #temperatuur {
-    font-size: 2.5em;
-    color: #ffffff;
+#elon {
+	position: absolute;
+	left: 150px;
+	animation: 2000ms smooth alternate ease-in;
+}
+
+@keyframes smooth {
+    0% { 
+        left: 550px; 
+    }
+    100% { 
+        left: 150px;
+    }
+}*/
+
+.animatie{
+    display: none;
 }
 
 
-footer{
-    font-size: 2.3em;
-    text-align: center;
+/*LAYOUT*/
+.head{
+    grid-area: head;
+}
+.ballen{
+    grid-area: ballen;
+}
+.wrapper{
+    grid-area: wrapper;
+}
+.vandaag1{
+    grid-area: vandaag1;
+}
+.dag{
+    grid-area: dag;
+}
+.datum1{
+    grid-area: datum1;
+}
+.verschil{
+    grid-area: verschil;
+}
+.temperatuur{
+    grid-area: temperatuur;
+}
+.animatie{
+    grid-area: animatie;
+}
+.foot{
+    grid-area: foot;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1365px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "ballen ballen"
+        "wrapper wrapper"
+        "vandaag1 dag"
+        " datum1 verschil"
+        "temperatuur temperatuur"
+        "foot foot";
+        gap: 5px;
+    }
+    
+    img{
+        width:250px;
+    }
+    h1{
+        font-size: 3.5em;
+    }
+    
+    #zon, #maan{
+        width: 150px;
+    }
+}
+@media only screen and (min-width: 1366px) and (max-width: 1919px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "ballen ballen ballen"
+        "wrapper wrapper wrapper"
+        "vandaag1 dag datum1"
+        "verschil temperatuur temperatuur"
+        "foot foot foot";
+        gap: 5px;
+    }
+    img{
+        width: 300px;
+    }
+    h1{
+        font-size: 4em;
+    }
+    #zon, #maan{
+        width: 180px;
+    }
+    #vandaag, #dagen, #datum, #dagenVerschil, #temperatuur {
+        font-size: 1.9em;
+        color: #ffffff;
+    }
+    .tekst{
+        font-size: 1.6em;
+        margin: 0px;
+    }
+}
+@media only screen and (min-width: 1920px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "ballen ballen ballen"
+        "wrapper wrapper wrapper"
+        "vandaag1 dag datum1"
+        "verschil temperatuur animatie"
+        "foot foot foot";
+        gap: 5px;
+    }
+    img{
+        width: 300px;
+    }
+    h1{
+        font-size: 4em;
+    }
+    .animatie{
+        display: block;
+    }
+    #zon, #maan{
+        width: 200px;
+    }
+    #vandaag, #dagen, #datum, #dagenVerschil, #temperatuur {
+        font-size: 2em;
+        color: #ffffff;
+    }
+    
+    .tekst{
+        font-size: 1.7em;
+        margin: 0px;
+    }
+}

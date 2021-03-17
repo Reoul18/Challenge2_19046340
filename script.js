@@ -1,8 +1,23 @@
 //BALL
-var mainHeading = document.getElementById('bal');
+var datumpje = new Date();
+var uurtje = datumpje.getHours();
+var zon = document.getElementById("zon");
+var maan = document.getElementById("maan");
 
-mainHeading.classList.add('changesSize');
+if(uurtje >= 6 && uurtje < 18){
+	maan.classList.remove("block");
+	zon.classList.remove("none");
 
+	zon.classList.add("block");
+	maan.classList.add("none");
+}else{
+	maan.classList.remove("none");
+	zon.classList.remove("block");
+
+	maan.classList.add("block");
+	zon.classList.add("none");
+	
+}
 
 
 //KLOK
@@ -99,5 +114,33 @@ if(uur >= 0 && uur < 6){
 } else if (uur >= 18){
 	temperatuur.innerHTML='-51 &#8451'; // tempertuur na 6u in de middag
 }
+
+
+//Animatie Elon Musk
+
+var mainHeading = document.getElementById('elon');
+
+document.getElementById('playButton').onclick = function(){
+	mainHeading.classList.add('changesSize');
+};
+
+/*
+Manier 1
+document.getElementById('backButton').onclick = function(){
+	mainHeading.classList.add('changesSizeReverse');
+};*/
+
+/*Manier2*/
+document.getElementById('backButton').onclick = function(){
+	mainHeading.classList.remove('changesSize');
+};
+
+//var elon = document.getElementById('elon');
+
+//document.getElementById('playButton').onclick = function(){
+//	elon.style.animationPlayState = 'running';
+//};
+
+
 
 
