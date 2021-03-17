@@ -17,7 +17,7 @@ img{
 }
 
 h1{ 
-    font-size: 100px;
+    font-size: 10em;
     text-align: center;
     margin: 0px;
     margin-bottom: 20px;
@@ -44,33 +44,71 @@ h1{
     animation: 3s linear 1s infinite running slidein;
 }
 
-/*KLOK*/
-.klokcontainer {
-	width: 500px;
-	margin:auto;
-    padding: 20px;
-	border: 5px solid #005288;
-    border-radius: 50%;
-	background-color: #000000;
-	overflow: hidden;
-	text-align: center;	
-	border-radius: 50px;
-}
 p{
     margin: 0px;
     padding: 5px;
-    font-size: 50px;
-}
-#klok{
-    font-size: 50px;
-    color: white;
-}
-.puntjes {
-	opacity: 0;
+    font-size: 2em;
 }
 
-/*Dagen in Mars*/
-.dagcontainer{
+
+/*KLOK*/
+.wrapper {
+    margin: auto;
+    height: 110px;
+    width: 400px;
+    position: relative;
+    background: linear-gradient(200deg,  #fafafa, #ffe882, #074963);
+    border-radius: 10px;
+    cursor: default;
+    animation: animate 20s linear infinite;
+}
+.wrapper .display,
+.wrapper span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.wrapper .display {
+    z-index: 1;
+    height: 85px;
+    width: 280px;
+    background: #000000;
+    border-radius: 6px;
+    text-align: center;
+}
+.display #klok {
+    line-height: 70px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(200deg, #fafafa, #ffe882, #074963);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.wrapper span{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: inherit;
+}
+.wrapper span:first-child{
+    filter: blur(5px);
+}
+.wrapper span:last-child{
+    filter: blur(20px);
+}
+
+
+
+.container{
 	width: 500px;
 	margin: auto;
     margin-top: 30px;
@@ -84,57 +122,14 @@ p{
     position: relative;
 }
 
-.tekst{
-    /*display: block;--niet nodig?*/
-    font-size: 30px;
-}
-
-#dagen{
-    font-size: 35px;
+#vandaag, #dagen, #datum, #dagenVerschil, #temperatuur {
+    font-size: 2.5em;
     color: #ffffff;
 }
 
-/*Datum*/
-.datumcontainer{
-	width: 500px;
-	margin: auto;
-    margin-top: 30px;
-    padding: 20px;
-	border: 5px solid #005288;
-    border-radius: 50%;
-	background-color: #000000;
-	overflow: hidden;
-	text-align: center;	
-	border-radius: 30px;
-    position: relative;
-}
-
-#datum{
-    font-size: 35px;
-    color: white;
-}
-
-.verschilcontainer{
-    width: 500px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 5px solid #005288;
-    border-radius: 50%;
-    background-color: #000000;
-    overflow: hidden;
-    text-align: center;	
-    border-radius: 30px;
-    position: relative;
-}
-
-#dagenVerschil{
-    font-size: 35px;
-    color: white;
-}
 
 footer{
-    font-size: 50px;
+    font-size: 2.3em;
     text-align: center;
 }
+
